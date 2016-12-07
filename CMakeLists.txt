@@ -3,5 +3,5 @@ project(Lab6)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.cpp TextAnalyzer.cpp TextAnalyzer.h)
-add_executable(Lab6 ${SOURCE_FILES})
+set(SOURCE_FILES main.cpp TextAnalyzer.cpp TextAnalyzer.h Geometry.cpp Geometry.h)
+add_executable(Lab6 ${SOURCE_FILES} Geometry.cpp Geometry.h)

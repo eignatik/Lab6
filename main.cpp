@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include "TextAnalyzer.h"
+#include "Geometry.h"
 
 using namespace std;
 
@@ -15,12 +16,22 @@ void printVector(vector<string> vec) {
 
 void taskFirst() {
     TextAnalyzer textAnalyzer = TextAnalyzer();
-    textAnalyzer.setFilePath("/home/evgeny/ClionProjects/Lab6/text.txt");
+    textAnalyzer.setFilePath("C:\\Users\\Plutto\\ClionProjects\\Lab6\\text.txt");
     printVector(textAnalyzer.getWords());
 }
 
 void taskSecond() {
-
+    Geometry geometry = Geometry(10);
+    geometry.printShapes();
+    geometry.countShapes();
+    geometry.removeAllPentagons();
+    geometry.printShapes();
+    geometry.createPointsVector();
+    cout << "Creating new list of shapes to sort: " << endl;
+    Geometry geometry2 = Geometry(10);
+    geometry2.printShapes();
+    geometry2.sortShapes();
+    geometry2.printShapes();
 }
 
 bool selectTask(int taskIndex) {
